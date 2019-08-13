@@ -1,0 +1,20 @@
+int BLUE=13; 
+int GREEN = 12;
+
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(BLUE, OUTPUT);
+  pinMode(GREEN, INPUT);
+}
+
+void loop() {
+  digitalWrite(BLUE, HIGH); 
+  delay(1000);
+  digitalWrite(BLUE, LOW); 
+  digitalWrite(GREEN, HIGH);
+  delay(1000);
+  digitalWrite(GREEN, LOW);
+ 
+ } 
+  
