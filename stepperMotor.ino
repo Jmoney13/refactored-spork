@@ -1,7 +1,7 @@
 #include <CheapStepper.h> 
 
 
-CheapStepper stepper1 (8,9,10,11); 
+CheapStepper stepper; 
 
 boolean moveClockwise = true; 
 
@@ -15,9 +15,9 @@ void setup() {
 
 void loop() {
     for (int s = 0; s < 4096; s++) {
-      stepper1.stepCW();
+      stepper.stepCW();
 
-      int nStep = stepper1.getStep();
+      int nStep = stepper.getStep();
 
       if (nStep % 64 == 0) {
         Serial.print("current step position: "); Serial.print(nStep);
